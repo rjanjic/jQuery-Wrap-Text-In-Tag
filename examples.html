@@ -46,6 +46,17 @@
 	</div>
 </div>
 
+<h1>Example 6</h1>
+Search for: <input type="text" value="quick"/>
+<div id="example-6">
+	The quick brown fox jumps over the lazy dog.
+	<div>
+		The quick brown fox jumps over the lazy dog.
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
 <script>
 // Wrap "fox" from element "#example-1" in "strong"
 $('#example-1').wrapTextInTag('fox');
@@ -68,6 +79,23 @@ $('#example-5').wrapTextInTag(
 		target:'_blank'
 	})
 );
+
+// Wrap text on input change
+$('[type="text"]').keyup(function(){
+	// unwrap
+	$("#example-6 .search").unwrapTextInTag();
+	// wrap
+	if ($(this).val().trim() != ''){
+		$('#example-6').wrapTextInTag(
+			$(this).val().trim(), 
+			$('<a/>', {
+				class:'search', 
+				href:'http://www.google.com/#q=' + encodeURIComponent($(this).val().trim()),
+				target:'_blank'
+			})
+		);
+	}
+}).trigger('keyup');
 </script>
 </body>
 </html>

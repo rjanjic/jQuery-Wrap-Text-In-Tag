@@ -138,3 +138,34 @@ Output:
 	</div>
 </div>
 `````
+
+Example 6
+ - Unwrap text from string
+
+`````html
+<div id="example-6">
+	The <a class="search" href="http://www.google.com/#q=quick" target="_blank">quick</a> brown fox jumps over the lazy dog.
+	<div>
+		The <a class="search" href="http://www.google.com/#q=quick" target="_blank">quick</a> brown fox jumps over the lazy dog.
+		<p>The <a class="search" href="http://www.google.com/#q=quick" target="_blank">quick</a> brown fox jumps over the lazy dog.</p>
+		<p>The <a class="search" href="http://www.google.com/#q=quick" target="_blank">quick</a> brown fox jumps over the lazy dog.</p>
+		<p>The <a class="search" href="http://www.google.com/#q=quick" target="_blank">quick</a> brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+`````
+
+`````javascript
+$("#example-6 .search").unwrapTextInTag();
+`````
+Output:
+`````html
+<div id="example-6">
+	The quick brown fox jumps over the lazy dog.
+	<div>
+		The quick brown fox jumps over the lazy dog.
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+`````

@@ -49,4 +49,12 @@
 			});
 		}
 	};
+	
+	$.fn.unwrapTextInTag = function () {
+		this.each(function() {
+			var parent = $(this).parent();
+			$(this).replaceWith(this.childNodes);
+			parent[0].normalize();
+		});
+	};
 })(jQuery);
