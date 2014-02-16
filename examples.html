@@ -1,0 +1,73 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery.wrapTextInTag.js"></script>
+
+</head>
+<body>
+<h1>Example 1</h1>
+<p id="example-1">The quick brown fox jumps over the lazy dog.</p>
+
+<h1>Example 2</h1>
+<p class="example-2">The quick brown fox jumps over the lazy dog.</p>
+<p class="example-2">The quick brown fox jumps over the lazy dog.</p>
+<p class="example-2">The quick brown fox jumps over the lazy dog.</p>
+
+<h1>Example 3</h1>
+<div id="example-3">
+	The quick brown fox jumps over the lazy dog.
+	<div>
+		The quick brown fox jumps over the lazy dog.
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<h1>Example 4</h1>
+<div id="example-4">
+	The quick brown fox jumps over the lazy dog.
+	<div>
+		The quick brown fox jumps over the lazy dog.
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<h1>Example 5</h1>
+<div id="example-5">
+	The quick brown fox jumps over the lazy dog.
+	<div>
+		The quick brown fox jumps over the lazy dog.
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+		<p>The quick brown fox jumps over the lazy dog.</p>
+	</div>
+</div>
+
+<script>
+// Wrap "fox" from element "#example-1" in "strong"
+$('#example-1').wrapTextInTag('fox');
+
+// Wrap "fox" and "dog" from elements ".example-2" in "strong"
+$('.example-2').wrapTextInTag(['fox', 'dog'], 'strong');
+
+// Wrap "fox" and "dog" in "strong" only from element "#example-3" without wrapping children elements
+$('#example-3').wrapTextInTag(['fox', 'dog'], 'strong', false);
+
+// Wrap "fox" and "dog" in "strong" from element "#example-4" and all children elements
+$('#example-4').wrapTextInTag(['fox', 'dog'], 'strong');
+
+// Wrap "fox" and "dog" in "jquery object" from element "#example-5" and all children elements
+$('#example-5').wrapTextInTag(
+	['fox', 'dog'], 
+	$('<a/>', {
+		class:'red', 
+		href:'http://www.example.com/?asdf=1&asd=2',
+		target:'_blank'
+	})
+);
+</script>
+</body>
+</html>
