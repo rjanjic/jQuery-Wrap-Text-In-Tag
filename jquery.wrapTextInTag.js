@@ -38,14 +38,18 @@
 			// Wrap children text
 			if (children) {
 				this.find('*').each(function() {
-					$(this).contents().filter(function () { return this.nodeType == 3; }).first().replaceWith(function () { 
-						return $(this).text().replace(regex, replace); 
+					$(this).contents().filter(function () { return this.nodeType == 3; }).each(function(){
+						$(this).first().replaceWith(function () { 
+							return $(this).text().replace(regex, replace); 
+						});
 					});
 				});
 			}
 			// Wrap current elements text
-			this.contents().filter(function () { return this.nodeType == 3; }).first().replaceWith(function () { 
-				return $(this).text().replace(regex, replace);
+			this.contents().filter(function () { return this.nodeType == 3; }).each(function(){
+				$(this).first().replaceWith(function () { 
+					return $(this).text().replace(regex, replace);
+				});
 			});
 		}
 	};
