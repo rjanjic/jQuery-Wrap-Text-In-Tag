@@ -91,7 +91,7 @@ $('#example-4').wrapTextInTag(['fox', 'dog'], 'strong');
 Output:
 `````html
 <div id="example-4">
-	The quick brown <strong><strong>fox</strong></strong> jumps over the lazy <strong><strong>dog</strong></strong>.
+	The quick brown <strong>fox</strong> jumps over the lazy <strong>dog</strong>.
 	<div>
 		The quick brown <strong>fox</strong> jumps over the lazy <strong>dog</strong>.
 		<p>The quick brown <strong>fox</strong> jumps over the lazy <strong>dog</strong>.</p>
@@ -129,7 +129,7 @@ $('#example-5').wrapTextInTag(
 Output:
 `````html
 <div id="example-5">
-	The quick brown <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank"><a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">fox</a></a> jumps over the lazy <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank"><a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">dog</a></a>.
+	The quick brown <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">fox</a> jumps over the lazy <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">dog</a>.
 	<div>
 		The quick brown <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">fox</a> jumps over the lazy <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">dog</a>.
 		<p>The quick brown <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">fox</a> jumps over the lazy <a class="red" href="http://www.example.com/?asdf=1&amp;asd=2" target="_blank">dog</a>.</p>

@@ -35,10 +35,6 @@
 				return $(this).text().replace(regex, replace);
 			});
 		} else { // With children
-			// Wrap current elements text
-			this.contents().filter(function () { return this.nodeType == 3; }).first().replaceWith(function () { 
-				return $(this).text().replace(regex, replace);
-			});
 			// Wrap children text
 			if (children) {
 				this.find('*').each(function() {
@@ -47,6 +43,10 @@
 					});
 				});
 			}
+			// Wrap current elements text
+			this.contents().filter(function () { return this.nodeType == 3; }).first().replaceWith(function () { 
+				return $(this).text().replace(regex, replace);
+			});
 		}
 	};
 })(jQuery);
