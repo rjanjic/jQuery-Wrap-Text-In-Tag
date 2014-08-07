@@ -7,7 +7,7 @@
  * @copyright 2013-2014 Radovan Janjic <rade@it-radionica.com>
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
-(function ($){
+;(function ($){
 	"use strict";
 	$.fn.wrapTextInTag = function (words, tag, children) {
 		// Defaults
